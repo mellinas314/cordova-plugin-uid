@@ -9,11 +9,10 @@
 	<repo>https://github.com/hygieiasoft/cordova-plugin-uid</repo>
 	<issue>https://github.com/hygieiasoft/cordova-plugin-uid/issues</issue>
 
-	<js-module src="www/uid.js" name="uid">
-		<clobbers target="cordova.plugins.uid" />
-	</js-module>
-
 	<platform name="android">
+		<js-module src="www/uid.js" name="uid">
+			<clobbers target="cordova.plugins.uid" />
+		</js-module>
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="UID">
 				<param name="android-package" value="org.hygieiasoft.cordova.uid.UID" />
