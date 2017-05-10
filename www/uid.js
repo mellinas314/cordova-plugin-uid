@@ -6,6 +6,15 @@
 var exec = require('cordova/exec');
 var utils = require('cordova/utils');
 
+exports.init = function(cb) {
+    exec(function(uid) {
+        for (var i in uid) {
+            exports[i] = uid[i];
+        }
+        cb();
+    }, cb, "UID", "getUID",[]);
+}
+/*
 exec(function(uid) {
 	for (var i in uid) {
 		exports[i] = uid[i];
@@ -13,3 +22,4 @@ exec(function(uid) {
 }, function(err) {
 	utils.alert("[ERROR] Error initializing Cordova uid pluging: " + err);
 }, "UID", "getUID", []);
+*/

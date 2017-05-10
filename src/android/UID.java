@@ -80,7 +80,7 @@ public class UID extends CordovaPlugin {
         Log.d(TAG, "*********** UID execute: " + args);
 
 		if (action.equals("getUID")) {
-			if( needRequestPermission && (args != null && args.length() > 0 && "appExecute".equals(args.getString(0)))){
+			if( needRequestPermission ){
 				if( !PermissionHelper.hasPermission(this, Manifest.permission.READ_PHONE_STATE)) {
 					needRequestPermission = false;
 
@@ -109,7 +109,6 @@ public class UID extends CordovaPlugin {
 				r.put("IMSI", UID.imsi);
 
 			}
-		
 			r.put("ICCID", UID.iccid);
 			r.put("MAC", UID.mac);
 
