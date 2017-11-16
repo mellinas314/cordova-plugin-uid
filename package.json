@@ -1,0 +1,14 @@
+{
+  "name": "cordova-plugin-mel314-uid",
+  "version": "1.0.0",
+  "description": "A plugin for obtaining device identification number",
+  "cordova": {
+    "id": "cordova-plugin-mel314-uid",
+    "platforms": []
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Neosistec",
+  "license": "ISC"
+}
